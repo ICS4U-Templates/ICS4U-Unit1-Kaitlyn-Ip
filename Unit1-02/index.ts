@@ -8,7 +8,7 @@
 import { createPrompt } from 'bun-promptx'
 
 // input
-const massOfObjectString = createPrompt("Enter the mass of an object: ")
+const massOfObjectString = createPrompt("Enter the mass of an object(kg): ")
 
 // error checking
 const massOfObject = parseFloat(massOfObjectString.value || "-1")
