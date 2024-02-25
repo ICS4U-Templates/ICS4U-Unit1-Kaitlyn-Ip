@@ -4,7 +4,7 @@
 *
 * @author Kaitlyn Ip
 * @version 1.0
-* @since   2021-11-20
+* @since   2024-02-20
 */
 
 import java.util.Scanner;
@@ -14,7 +14,7 @@ import java.util.Scanner;
 */
 final class Logs {
     /**
-    *     * Maple logs weigh 20 kg/m.
+    * Maple logs weigh 20 kg/m.
     */
     static final int WEIGHT_PER_METER = 20;
     /**
@@ -22,15 +22,15 @@ final class Logs {
     */
     static final int MAX_WEIGHT = 1100;
 
-    /**
-    * Prevent instantiation.
-    * Throw an exception IllegalStateException.
-    * if this ever is called
-    * throws IllegalStateException
-    *
-    */
+   /**
+   * Prevent instantiation.
+   * @Throw an exception IllegalStateException.
+   * if this ever is called
+   * throws IllegalStateException
+   *
+   */
     private Logs() {
-        throw new IllegalStateException("Cannot be instantiated");
+       throw new IllegalStateException("Cannot be instantiated");
     }
 
     /**
@@ -39,18 +39,17 @@ final class Logs {
     * @param args No args will be used
     */
     public static void main(final String[] args) {
-
-    // input
-    final Scanner myObj = new Scanner(System.in);
-    System.out.print("Enter length of the logs. Valid choices are -> 0.25, 0.5, 1: ");
-    // String input
-    final float lengthOfLogs = myObj.nextFloat();
-    // Process
-    final float weightOfLog = WEIGHT_PER_METER * lengthOfLogs;
-    final float maxNumberOfLogs = MAX_WEIGHT / weightOfLog;
-    // Output
-    System.out.printf("The truck can carry " + (int) maxNumberOfLogs
-                      + " logs that are " + lengthOfLogs
-	              + " meter(s) long.\n" + "\nDone" + "\n");
+	    // input
+	    final Scanner myObj = new Scanner(System.in);
+	    System.out.print("Enter length of logs. Options->0.25, 0.5, 1:");
+	    // String input
+	    final float lengthOfLogs = myObj.nextFloat();
+	    // Process
+	    final float weightOfLog = WEIGHT_PER_METER * lengthOfLogs;
+	    final float maxNumberOfLogs = MAX_WEIGHT / weightOfLog;
+	    // Output
+	    System.out.printf("The truck can carry " + (int) maxNumberOfLogs
+			    + " logs that are " + lengthOfLogs
+			    + " meter(s) long.\n" + "\nDone" + "\n");
     }
 }
