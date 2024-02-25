@@ -12,7 +12,7 @@ import java.util.Scanner;
 /**
 * This is calculate how many logs can go on a truck program.
 */
-final class Logs {
+static final class Logs {
     /**
     * Maple logs weigh 20 kg/m.
     */
@@ -22,24 +22,13 @@ final class Logs {
     */
     static final int MAX_WEIGHT = 1100;
 
-   /**
-   * Prevent instantiation.
-   * @Throw an exception IllegalStateException.
-   * if this ever is called
-   * throws IllegalStateException
-   *
-   */
-    private Logs() {
-       throw new IllegalStateException("Cannot be instantiated");
-    }
-
     /**
     * This starting main() function.
     *
     * @param args No args will be used
     */
     public static void main(final String[] args) {
-	    // input
+	    // Input
 	    final Scanner myObj = new Scanner(System.in);
 	    System.out.print("Enter length of logs. Options->0.25, 0.5, 1:");
 	    // String input
