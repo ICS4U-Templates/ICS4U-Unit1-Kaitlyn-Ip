@@ -42,8 +42,7 @@ final class Logs {
 
     // input
     final Scanner myObj = new Scanner(System.in);
-    System.out.print("Enter the length of the logs in meters."
-		    + "\nValid choices are -> 0.25, 0.5, 1: ");
+    System.out.print("Enter the length of the logs in meters.Valid choices are -> 0.25, 0.5, 1: ");
     // String input
     final float lengthOfLogs = myObj.nextFloat();
     // Process
