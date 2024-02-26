@@ -1,9 +1,17 @@
+/*
+* This program calculates how many logs can fit on the truck.
+*
+* @author Kaitlyn Ip
+* @version 1.0
+* @since 2024-02-20
+*/
+
 import java.util.Scanner;
 
 /**
- * This program calculates how many logs can fit on the truck.
+ * This is the log program.
  */
- final class Logs {
+final class Logs {
 
     /**
      * Maple logs weigh 20 kg/m.
@@ -13,6 +21,18 @@ import java.util.Scanner;
      * Logging truck can carry 1100 kg.
      */
     static final int MAX_WEIGHT = 1100;
+
+    /**
+     * Prevent instantiation.
+     * Throw an exception IllegalStateException.
+     * if this is ever called
+     *
+     * @throws IllegalStateException if this is ever called
+     *
+     */
+    private HelloWorld() {
+        throw new IllegalStateException("Cannot be instantiated");
+    }
 
     /**
      * The main method.
