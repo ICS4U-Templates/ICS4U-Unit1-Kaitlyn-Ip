@@ -28,7 +28,7 @@ final class Logs {
      * if this is ever called
      *
      * @throws IllegalStateException if this is ever called
-     *
+      *
      */
     private HelloWorld() {
         throw new IllegalStateException("Cannot be instantiated");
