@@ -31,7 +31,7 @@ import java.util.Scanner;
         // Output
         System.out.printf("The truck can carry " + (int) maxNumberOfLogs
                         + " logs that are " + lengthOfLogs
-                        + " meter(s) long.\n" + "\nDone" + "\n");
+                        + " meter(s) long.\n" + "\nDone." + "\n");
         // Close the Scanner
         myObj.close();
     }
