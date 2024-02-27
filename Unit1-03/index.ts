@@ -1,41 +1,69 @@
 /*
- * The program shows hows how to use if statements.
- *
- * By: Kaitlyn Ip
- * Version: 1.0
- * Since:   2024-02-20
- */
+ * This is a program that calculates how long you should microwave subs, pizzas and soups.
+ * @author  Kaitlyn Ip 
+ * @version 1.0 
+ * @since   2024-02-26
+ */ 
+  
+import { createPrompt } from 'bun-promptx' 
 
-import promptSync from 'prompt-sync'
 
-const prompt = promptSync()
+const subPizzaOrSoup = createPrompt("Are you heating sub, pizza, or soup?: ")
+const numberOfFoodString = createPrompt("How many" ${subPizzaOrSoup.value}(s) "are you cooking?(max:3): ")
 
-const itemType = prompt('What Food? (Sub, Pizza, Soup): ')
-const itemAmountString = prompt('How Many? (1-3): ')
-const itemAmountInt = parseInt(itemAmountString)
-let time = 1
-let percent = 0.5
+// Error checking
+const numberOfFood = parseInt(numberOfFoodString.value)
 
-if (itemType === 'Sub') {
-	  time = 45
-} else if (itemType === 'Pizza') {
-	  time = 60
-} else if (itemType === 'Soup') {
-	  time = 105
+// Process
+let minute: number | undefined
+let second: number | undefined
+
+if (subPizzaOrSoup.value === "sub") {
+ if (numberOfFood === 1) {
+     minute = 1
+     second = 0
+  } else if (numberOfFood === 2) {
+     minute = 1
+     second = 30
+  } else if (numberOfFood === 3) {
+     minute = 2
+     second = 0
+  } else {
+     console.log("Invalid input.")
+  }
+} else if (subPizzaOrSoup.value === "pizza") {
+ if (numberOfFood === 1) {
+    minute = 0
+    second = 45
+ } else if (numberOfFood === 2) {
+    minute = 1
+    second = 8
+ } else if (numberOfFood === 3) {
+    minute = 1
+    second = 20
+ } else {
+    console.log("Invalid input.")
+ }
+} else if (subPizzaOrSoup.value === "soup") {
+ if (numberOfFood === 1) {
+    minute = 1
+    second = 45
+ } else if (numberOfFood === 2) {
+    minute = 2
+    second = 18
+ } else if (numberOfFood === 3) {
+    minute = 3
+    second = 20
+ } else {
+   console.log("Invalid input.")
+ }
 } else {
-	  console.log('Invalid Input!')
+  console.log("Invalid Input.")
+}
+// Output
+
+if (minute !== undefined || second !== undefined) {
+  console.log("The total cook time is" ${minute} "minutes and" ${second} "seconds.")
 }
 
-if (itemAmountInt === 2) {
-	  percent = 1.5
-} else if (itemAmountInt === 3) {
-	  percent = 2
-} else if (itemAmountInt === 1) {
-	  percent = 1
-} else {
-	  console.log('Invalid Input!')
-}
-const answer = time * percent
-console.log(`Total cook time is: ${answer} seconds`)
-
-console.log('\nDone.')
+console.log("\nDone.")
