@@ -9,7 +9,7 @@ import { createPrompt } from 'bun-promptx'
 
 
 const subPizzaOrSoup = createPrompt("Are you heating sub, pizza, or soup?: ")
-const numberOfFoodString = createPrompt("How many" ${subPizzaOrSoup.value}(s) "are you cooking?(max:3): ")
+const numberOfFoodString = createPrompt(`How many ${subPizzaOrSoup.value}(s) are you cooking?(max:3): `)
 
 // Error checking
 const numberOfFood = parseInt(numberOfFoodString.value)
@@ -63,7 +63,7 @@ if (subPizzaOrSoup.value === "sub") {
 // Output
 
 if (minute !== undefined || second !== undefined) {
-  console.log("The total cook time is" ${minute} "minutes and" ${second} "seconds.")
+  console.log(`The total cook time is ${minute} minutes and ${second} seconds.`)
 }
 
 console.log("\nDone.")
