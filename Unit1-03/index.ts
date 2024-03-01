@@ -15,48 +15,48 @@ const numberOfFoodString = createPrompt(`How many ${subPizzaOrSoup.value}(s) are
 const numberOfFood = parseInt(numberOfFoodString.value)
 
 // Process
-let minute: number | undefined
-let second: number | undefined
+let minute = 0
+let second = 0 
 
 if (subPizzaOrSoup.value === "sub") {
- if (numberOfFood === 1) {
-     minute = 1
-     second = 0
+  if (numberOfFood === 1) {
+    minute = 1
+    second = 0
   } else if (numberOfFood === 2) {
-     minute = 1
-     second = 30
+    minute = 1
+    second = 30
   } else if (numberOfFood === 3) {
-     minute = 2
-     second = 0
+    minute = 2
+    second = 0
   } else {
-     console.log("Invalid input.")
+    console.log("Invalid input.")
   }
 } else if (subPizzaOrSoup.value === "pizza") {
- if (numberOfFood === 1) {
+  if (numberOfFood === 1) {
     minute = 0
     second = 45
- } else if (numberOfFood === 2) {
+  } else if (numberOfFood === 2) {
     minute = 1
     second = 8
- } else if (numberOfFood === 3) {
+  } else if (numberOfFood === 3) {
     minute = 1
     second = 20
- } else {
+  } else {
     console.log("Invalid input.")
- }
+  }
 } else if (subPizzaOrSoup.value === "soup") {
- if (numberOfFood === 1) {
+  if (numberOfFood === 1) {
     minute = 1
     second = 45
- } else if (numberOfFood === 2) {
+  } else if (numberOfFood === 2) {
     minute = 2
     second = 18
- } else if (numberOfFood === 3) {
+  } else if (numberOfFood === 3) {
     minute = 3
     second = 20
- } else {
-   console.log("Invalid input.")
- }
+  } else {
+    console.log("Invalid input.")
+  }
 } else {
   console.log("Invalid Input.")
 }
