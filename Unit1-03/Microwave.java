@@ -84,78 +84,78 @@ final class Microwave {
          */
 
 	private Microwave() {
-								            throw new IllegalStateException("Cannot be instantiated");
-									        }
-							        /**
-								 *     * The starting main() function.
-								 *         *
-								 *             * @param args No args will be used
-								 *                 */
+            throw new IllegalStateException("Cannot be instantiated");
+	}
+        /**
+         * The starting main() function.
+         *
+         * @param args No args will be used
+         */
 
-							        public static void main(final String[] args) {
+        public static void main(final String[] args) {
+	
+		final Scanner scanner = new Scanner(System.in);
 
-									        final Scanner scanner = new Scanner(System.in);
+		// Prompt user for the type of food (sub, pizza, or soup)
+		System.out.print("Are you heating sub, pizza, or soup?: ");
+		final String subPizzaOrSoup = scanner.nextLine();
+	
+		// Prompt user for the number of items to cook
+		System.out.print("How many " + subPizzaOrSoup
+                        + "(s) are you cooking? (max: 3): ");
 
-										        // Prompt user for the type of food (sub, pizza, or soup)
-											//         System.out.print("Are you heating sub, pizza, or soup?: ");
-											//                 final String subPizzaOrSoup = scanner.nextLine();
-											//
-											//                         // Prompt user for the number of items to cook
-											//                                 System.out.print("How many " + subPizzaOrSoup
-											//                                                 + "(s) are you cooking? (max: 3): ");
-											//                                                         final int numberOfFood = Integer.parseInt(scanner.nextLine());
-											//
-											//                                                                 // Process
-											//                                                                         int minute = 0;
-											//                                                                                 int second = 0;
-											//
-											//                                                                                         if ("sub".equals(subPizzaOrSoup)) {
-											//                                                                                                     if (numberOfFood == NUMBEROFFOOD1) {
-											//                                                                                                                     minute = TIME1;
-											//                                                                                                                                     second = TIME0;
-											//                                                                                                                                                 } else if (numberOfFood == NUMBEROFFOOD2) {
-											//                                                                                                                                                                 minute = TIME1;
-											//                                                                                                                                                                                 second = TIME30;
-											//                                                                                                                                                                                             } else if (numberOfFood == NUMBEROFFOOD3) {
-											//                                                                                                                                                                                                             minute = TIME2;
-											//                                                                                                                                                                                                                             second = TIME0;
-											//                                                                                                                                                                                                                                         } else {
-											//                                                                                                                                                                                                                                                         System.out.println("Invalid input");
-											//                                                                                                                                                                                                                                                                     }
-											//                                                                                                                                                                                                                                                                             } else if ("pizza".equals(subPizzaOrSoup)) {
-											//                                                                                                                                                                                                                                                                                         if (numberOfFood == NUMBEROFFOOD1) {
-											//                                                                                                                                                                                                                                                                                                         minute = TIME0;
-											//                                                                                                                                                                                                                                                                                                                         second = TIME45;
-											//                                                                                                                                                                                                                                                                                                                                     } else if (numberOfFood == NUMBEROFFOOD2) {
-											//                                                                                                                                                                                                                                                                                                                                                     minute = TIME1;
-											//                                                                                                                                                                                                                                                                                                                                                                     second = TIME8;
-											//                                                                                                                                                                                                                                                                                                                                                                                 } else if (numberOfFood == NUMBEROFFOOD3) {
-											//                                                                                                                                                                                                                                                                                                                                                                                                 minute = TIME1;
-											//                                                                                                                                                                                                                                                                                                                                                                                                                 second = TIME20;
-											//                                                                                                                                                                                                                                                                                                                                                                                                                             } else {
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                             System.out.println("Not a valid answer");
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                 } else if ("soup".equals(subPizzaOrSoup)) {
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                             if (numberOfFood == NUMBEROFFOOD1) {
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             minute = TIME1;
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             second = TIME45;
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         } else if (numberOfFood == NUMBEROFFOOD2) {
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         minute = TIME2;
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         second = TIME18;
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     } else if (numberOfFood == NUMBEROFFOOD3) {
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     minute = TIME3;
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     second = TIME20;
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 } else {
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 System.out.println("Invalid answer");
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             }
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     } else {
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 System.out.println("Input is invalid, try again");
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
-											//
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 // Output
-											//
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         System.out.println("The total cook time is " + minute
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         + " minutes and " + second + " seconds.\n");
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 System.out.println("Done.");
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     }
-											//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     }
+                final int numberOfFood = Integer.parseInt(scanner.nextLine());
+		
+		// Process
+		int minute = 0;
+                int second = 0;
+
+                if ("sub".equals(subPizzaOrSoup)) {
+                    if (numberOfFood == NUMBEROFFOOD1) {
+                        minute = TIME1;
+                        second = TIME0;
+                    } else if (numberOfFood == NUMBEROFFOOD2) {
+                        minute = TIME1;
+	                second = TIME30;
+	            } else if (numberOfFood == NUMBEROFFOOD3) {
+	                minute = TIME2;
+	                second = TIME0;
+	            } else {
+	                System.out.println("Invalid Input.");
+                    }
+	        } else if ("pizza".equals(subPizzaOrSoup)) {
+                    if (numberOfFood == NUMBEROFFOOD1) {
+	                minute = TIME0;
+	                second = TIME45;
+                } else if (numberOfFood == NUMBEROFFOOD2) {
+	                minute = TIME1;
+	                second = TIME8;
+	        } else if (numberOfFood == NUMBEROFFOOD3) {
+	            minute = TIME1;
+	            second = TIME20;
+	        } else {
+	            System.out.println("Invalid Input.");
+		}
+	    } else if ("soup".equals(subPizzaOrSoup)) {
+	        if (numberOfFood == NUMBEROFFOOD1) {
+	            minute = TIME1;
+	            second = TIME45;
+	        } else if (numberOfFood == NUMBEROFFOOD2) {
+	            minute = TIME2;
+	            second = TIME18;
+	        } else if (numberOfFood == NUMBEROFFOOD3) {
+	            minute = TIME3;
+	            second = TIME20;
+	        } else {
+	            System.out.println("Invalid Input.");
+		}
+	    } else {
+	        System.out.println("Invalid input, try again.");
+	    }
+
+	    // Output
+	    System.out.println("The total cook time is " + minute
+	            + " minutes and " + second + " seconds.\n");
+            System.out.println("Done.");
+        }
+}
