@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 final class Microwave {
 
-	/**
+        /**
 	 * Number of food, 1.
 	 */
 	 public static final int NUMBEROFFOOD1 = 1;
@@ -78,7 +78,7 @@ final class Microwave {
          * Prevent instantiation.
          * Throw an exception IllegalStateException.
          * if this is ever called
-         * 
+         *
          * @throws IllegalStateException if this is ever called
          *
          */
@@ -93,20 +93,19 @@ final class Microwave {
          */
 
         public static void main(final String[] args) {
-	
 		final Scanner scanner = new Scanner(System.in);
 
 		// Prompt user for the type of food (sub, pizza, or soup)
 		System.out.print("Are you heating sub, pizza, or soup?: ");
 		final String subPizzaOrSoup = scanner.nextLine();
 	
-		// Prompt user for the number of items to cook
+                // Prompt user for the number of items to cook
 		System.out.print("How many " + subPizzaOrSoup
                         + "(s) are you cooking? (max: 3): ");
 
                 final int numberOfFood = Integer.parseInt(scanner.nextLine());
 		
-		// Process
+                // Process
 		int minute = 0;
                 int second = 0;
 
