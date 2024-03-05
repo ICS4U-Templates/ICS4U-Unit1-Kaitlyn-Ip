@@ -1,41 +1,79 @@
-import java.util.Scanner;
+/*
+ * This program in a number guessing game.
+ *
+ * @author Kaitlyn Ip
+ * @version 1.0
+ * @since   2024-02-28
+ */
 
-final class Numbers {
-    public static void main(String[] args) {
-        // Create a Scanner object to read user input
-	Scanner scanner = new Scanner(System.in);
-	// Generate a random number between 1 and 6
-        int randomNumber = (int) (Math.random() * 6) + 1;
-	// Initialize a counter to keep track of the number of guesses
-        int counter = 0;
+ import java.util.Scanner;
 
-	// Start the loop
-        while (true) {
-	    // Prompt the user to guess a number
-            System.out.print("Guess a number (1-6): ");
-	    // Read user input as a string
-            String userString = scanner.nextLine();
-	    // Convert the user input to an integer
-            int userNumber = Integer.parseInt(userString);
-	    // Increment the guess counter
-            counter++;
+ /**
+  * This is a standard calculation program.
+  */
+ final class NumberGuessingGame {
 
-	    // Check if the user's guess is correct
-	    if (userNumber == randomNumber) {
-		// If the guess is correct, display a message and break out of loop
-	        System.out.println("Correct number, it took you " + counter + " tries.");
-	        break;
-	    } else if (userNumber < randomNumber) {
-		// If the guess is too low, tell user to enter higher number
-	        System.out.println("Too low, guess higher.");
-	    } else if (userNumber > randomNumber) {
-		// If the guess is too high, tell user to enter lower number
-	        System.out.println("Too high, guess lower.");
-	    } else {
-		// If input is invalid, display error message
-	        System.out.println("Invalid Input.");
-	    }
-      }
-      System.out.println("\nDone.");
-    }
-}
+	     /**
+	      * Number, 6.
+	      */
+	     public static final int NUMBER6 = 6;
+
+                 /**
+		  * Prevent instantiation.
+		  * Throw an exception IllegalStateException.
+		  *  if this is ever called
+		  *
+		  * @throws IllegalStateException if this is ever called
+		  *
+		  */
+
+                  private NumberGuessingGame() {
+                      throw new IllegalStateException("Cannot be instantiated");
+		  }
+		  /**
+		   * The starting main() function.
+		   *
+		   * @param args No args will be used
+		   */
+
+		  public static void main(final String[] args) {
+		      // Generate a number between 0 to 6
+		      final int correctNum = (int) (Math.random() * 7);
+                      int tries = 0;
+                      final Scanner scanner = new Scanner(System.in);
+
+                      // Use a while loop to continue
+                      // until the user guesses the right answer
+                      while (true) {
+                      System.out.print("Input a number between 0 - 6: ");
+                                                                        final String userNumString = scanner.nextLine();
+				     //                                                                                     if ("exit".equals(userNumString)) {
+				     //                                                                                                     break;
+				     //                                                                                                                 }
+				     //                                                                                                                             try {
+				     //                                                                                                                                             final int userNumInt = Integer.parseInt(userNumString);
+				     //                                                                                                                                                             if (userNumInt < 0 || userNumInt > NUMBER6) {
+				     //                                                                                                                                                                                 System.out.println("\nThis is not between 0 and 6\n");
+				     //                                                                                                                                                                                                 } else {
+				     //                                                                                                                                                                                                                     tries++;
+				     //                                                                                                                                                                                                                                         if (userNumInt != correctNum) {
+				     //                                                                                                                                                                                                                                                                 if (userNumInt < correctNum) {
+				     //                                                                                                                                                                                                                                                                                             System.out.println("\nYour guess is too low.");
+				     //                                                                                                                                                                                                                                                                                                                     } else {
+				     //                                                                                                                                                                                                                                                                                                                                                 System.out.println("\nYour guess is too high.");
+				     //                                                                                                                                                                                                                                                                                                                                                                         }
+				     //                                                                                                                                                                                                                                                                                                                                                                                                 System.out.println("Please try again.\n");
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                     } else {
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                             System.out.println("\nYou guessed correctly! It took you "
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     + tries + " tries.");
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             break;
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             } catch (NumberFormatException numberFormatException) {
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             System.out.println("\nThat is not a valid input.\n");
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	System.out.println("\nDone.");
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	        scanner.close();
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	            }
+				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	            }
