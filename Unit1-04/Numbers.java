@@ -6,17 +6,17 @@
  * @since   2024-02-28
  */
 
- import java.util.Scanner;
+import java.util.Scanner;
 
- /**
-  * This is a standard calculation program.
-  */
- final class NumberGuessingGame {
+/**
+ * This is a standard calculation program.
+ */
+final class NumberGuessingGame {
 
-	     /**
-	      * Number, 6.
-	      */
-	     public static final int NUMBER6 = 6;
+    /**
+     * Number, 6.
+     */
+     public static final int NUMBER6 = 6;
 
                  /**
 		  * Prevent instantiation.
@@ -46,34 +46,34 @@
                       // until the user guesses the right answer
                       while (true) {
                       System.out.print("Input a number between 0 - 6: ");
-                                                                        final String userNumString = scanner.nextLine();
-				     //                                                                                     if ("exit".equals(userNumString)) {
-				     //                                                                                                     break;
-				     //                                                                                                                 }
-				     //                                                                                                                             try {
-				     //                                                                                                                                             final int userNumInt = Integer.parseInt(userNumString);
-				     //                                                                                                                                                             if (userNumInt < 0 || userNumInt > NUMBER6) {
-				     //                                                                                                                                                                                 System.out.println("\nThis is not between 0 and 6\n");
-				     //                                                                                                                                                                                                 } else {
-				     //                                                                                                                                                                                                                     tries++;
-				     //                                                                                                                                                                                                                                         if (userNumInt != correctNum) {
-				     //                                                                                                                                                                                                                                                                 if (userNumInt < correctNum) {
-				     //                                                                                                                                                                                                                                                                                             System.out.println("\nYour guess is too low.");
-				     //                                                                                                                                                                                                                                                                                                                     } else {
-				     //                                                                                                                                                                                                                                                                                                                                                 System.out.println("\nYour guess is too high.");
-				     //                                                                                                                                                                                                                                                                                                                                                                         }
-				     //                                                                                                                                                                                                                                                                                                                                                                                                 System.out.println("Please try again.\n");
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                     } else {
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                             System.out.println("\nYou guessed correctly! It took you "
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     + tries + " tries.");
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             break;
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             } catch (NumberFormatException numberFormatException) {
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             System.out.println("\nThat is not a valid input.\n");
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	System.out.println("\nDone.");
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	        scanner.close();
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	            }
-				     //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	            }
+                      final String userNumString = scanner.nextLine();
+                      if ("exit".equals(userNumString)) {
+                          break;
+                      }
+                      try {
+                          final int userNumInt = Integer.parseInt(userNumString);
+                          if (userNumInt < 0 || userNumInt > NUMBER6) {
+                              System.out.println("\nThis is not between 0 and 6\n");
+                          } else {
+                              tries++;
+                              if (userNumInt != correctNum) {
+			          if (userNumInt < correctNum) {
+			              System.out.println("\nYour guess is too low.");
+                                  } else {
+				      System.out.println("\nYour guess is too high.");
+                                  }
+				  System.out.println("Please try again.\n");
+                              } else {
+                                  System.out.println("\nYou guessed correctly! It took you "
+                                                  + tries + " tries.");
+                                  break;
+                              }
+                          }
+                      } catch (NumberFormatException numberFormatException) {
+                          System.out.println("\nThat is not a valid input.\n");
+                      }
+                }
+                System.out.println("\nDone.");
+                scanner.close();
+        }
+}
