@@ -17,7 +17,7 @@ final class Logs {
      * Maple logs weigh 20 kg/m.
      */
     static final int WEIGHT_PER_METER = 20;
-   
+
     /**
      * Logging truck can carry 1100 kg.
      */
