@@ -26,7 +26,6 @@ final class Logs {
      * Prevent instantiation.
      * Throw an exception IllegalStateException.
      * if this is ever called
-     *
      * @throws IllegalStateException if this is ever called
      */
     private HelloWorld() {
