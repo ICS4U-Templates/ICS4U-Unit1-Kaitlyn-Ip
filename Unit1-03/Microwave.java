@@ -16,7 +16,7 @@ final class Microwave {
 
         /**
          * Number of food, 1.
-	 */
+         */
 	 public static final int NUMBEROFFOOD1 = 1;
 
 	/**
@@ -104,7 +104,7 @@ final class Microwave {
                         + "(s) are you cooking? (max: 3): ");
 
                 final int numberOfFood = Integer.parseInt(scanner.nextLine());
-	
+
                 // Process
 		int minute = 0;
                 int second = 0;
