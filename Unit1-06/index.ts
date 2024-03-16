@@ -18,13 +18,9 @@ const file = readFileSync(process.argv[2], 'utf8')
 
 const newArray = file.split(/\r?\n/)
 
-// pop last element, since it will be empty (the EOF)
-
-newArray.pop()
 console.log(newArray)
 
 // Define functions to calculate mean, median, and mode
-
 function calculateMean(arr) {
   let sum = 0
   for (const num of arr) {
