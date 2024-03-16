@@ -16,7 +16,7 @@ import java.util.Map;
  * This is a standard calculation program.
  */
 
-final class MeanMedianModeCalculator {
+final class MMM {
 
     /**
      * This is a standard calculation program.
@@ -28,7 +28,7 @@ final class MeanMedianModeCalculator {
         if (args.length < 1) {
             System.out.println(
                 "Usage: java MeanMedianModeCalculator <set1.txt>");
-	}
+        }
 
         final String filename = args[0];
         final List<Integer> numbers = readFile(filename);
