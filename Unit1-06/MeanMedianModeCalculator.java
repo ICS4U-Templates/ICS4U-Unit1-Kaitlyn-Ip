@@ -71,10 +71,10 @@ final class MeanMedianModeCalculator {
             }
         } catch (NumberFormatException nfe) {
             System.out.println("Array does not contain a number.");
-	} catch (FileNotFoundException nfe) {
-	    System.out.println("File not found.");
-	} catch (IOException nfe) {
-	    System.out.println("IO exception.");
+        } catch (FileNotFoundException nfe) {
+            System.out.println("File not found.");
+        } catch (IOException nfe) {
+            System.out.println("IO exception.");
         }
     }
 
