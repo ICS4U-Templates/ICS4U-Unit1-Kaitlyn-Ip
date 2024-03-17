@@ -7,6 +7,9 @@
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +19,7 @@ import java.util.Map;
  * This is a standard calculation program.
  */
 
-final class MMM {
+final class MeanMedianModeCalculator {
 
     /**
      * This is a standard calculation program.
@@ -66,8 +69,12 @@ final class MMM {
                 // Assuming each line contains a single integer
                 numbers.add(Integer.parseInt(line.trim()));
             }
-        } catch (InputMismatchException inputMismatchException) {
-            inputMismatchException.printStackTrace();
+        } catch (NumberFormatException nfe) {
+            System.out.println("Array does not contain a number.");
+	} catch (FileNotFoundException nfe) {
+	    System.out.println("File not found.");
+	} catch (IOException nfe) {
+	    System.out.println("IO exception.");
         }
     }
 
