@@ -6,9 +6,8 @@
  */
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.FileNotFoundException;
-import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -76,6 +75,8 @@ final class MeanMedianModeCalculator {
         } catch (IOException nfe) {
             System.out.println("IO exception.");
         }
+
+        return numbers;
     }
 
     /**
@@ -106,13 +107,15 @@ final class MeanMedianModeCalculator {
         final List<Integer> sortedNumbers = new ArrayList<>(numbers);
         sortedNumbers.sort(Integer::compareTo);
         final int length = sortedNumbers.size();
-        if (length % 2 == 0) {
-            return (
-                sortedNumbers.get(length / 2 - 1)
-                + sortedNumbers.get(length / 2)) / 2.0;
+
+        double median;
+	if (length % 2 == 0) {
+            median = (sortedNumbers.get9length / 2 - 1) + sortedNumbers.get(Length / 2))
         } else {
-            sortedNumbers.get(length / 2);
+            median = sortedNumbers.get(length / 2);
         }
+
+        return median;
     }
 
     /**
@@ -126,7 +129,7 @@ final class MeanMedianModeCalculator {
     private static List<Integer> calculateMode(List<Integer> numbers) {
         final List<Integer> modes = new ArrayList<>();
         final Map<Integer, Integer> frequencyMap = new HashMap<>();
-        final int maxFrequency = 0;
+        int maxFrequency = 0;
         for (int num : numbers) {
             final int frequency = frequencyMap.getOrDefault(num, 0) + 1;
             frequencyMap.put(num, frequency);
